@@ -1,0 +1,173 @@
+ @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root {
+  --color-swan: #f7f1e3;
+  --color-shadow-steel: #4b4b4b;
+  --color-black: #222;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url('images/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#header {
+  font-family: 'Arvo', sans-serif;
+  font-size: 1.5rem;
+  top: 0;
+  position: sticky;
+  text-align: center;
+}
+
+#header > nav {
+  display: inline-block;
+  padding: 1rem;
+  background-color: whitesmoke;
+
+}
+
+li {
+  display: inline;
+  margin: 1rem;
+}
+
+.nav-link {
+  transition: transform 0.3s;
+}
+
+.nav-link:hover {
+  text-decoration: underline 3px var(--color-black);
+  cursor: pointer;
+}
+
+.active {
+  text-decoration: underline 3px var(--color-black);
+}
+
+#content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 80vh;
+  width: 100%;
+  animation: fadeIn 1.5s;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  animation: fadeIn 1.2s;
+}
+
+.title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20vh;
+  color: var(--color-swan);
+  cursor: help;
+}
+
+.heading {
+  font-family: 'Arvo', sans-serif;
+  font-size: 4vh;
+  color: var(--color-swan);
+  text-decoration: underline 5px;
+}
+
+#footer {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3vh;
+  color: var(--color-swan);
+  bottom: 0;
+  position: sticky;
+  text-align: center;
+}
+
+.footer-text {
+  background-color: var(--color-black);
+  padding: 10px;
+}
+
+.subtitle {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 3vh;
+  color: var(--color-shadow-steel);
+}
+
+.subtitle > span {
+  background-color: var(--color-swan);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2.5rem;
+  margin-left: 30vh;
+  margin-top: 7vh;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 70%;
+  animation: fadeIn 1.2s;
+
+}
+
+.card {
+  flex-basis: 30%;
+  margin-top: 1.5rem;
+  background-color: #f1f2f6;
+}
+
+.card__cover img {
+  height: 50%;
+  width: 100%;
+}
+ 
+.card__content {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 2.5vh;
+  text-align: center;
+  flex: 1;
+}
+
+.desc {
+  padding: 5%;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 2.5vh;
+  text-align: left;
+  animation: fadeIn 1.2s;
+}
+
+hr {
+  border: 2px solid var(--color-swan);
+  width: 20%;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
